@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Hud.Core.Controls\Hud.Core.Controls.csproj" />
+  </ItemGroup>
+
 </Project>

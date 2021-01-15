@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <ProgressBar Value="15" Background="Black"
+                     Foreground="Blue"
+                     Height="30"/>
     </Grid>
 </Window>
