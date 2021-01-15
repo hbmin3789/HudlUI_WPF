@@ -2,5 +2,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:Hud.Core.Controls">
-    <ResourceDictionary Source="HudWindowStyleThemes"/>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ProgressHudStyleThemes.xaml"/>
+        <ResourceDictionary Source="HudWindowStyleThemes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
