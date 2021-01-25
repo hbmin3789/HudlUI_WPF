@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Prism.Mvvm;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,17 @@ namespace HudUI_WPF_Test
     /// </summary>
     public partial class MainWindow : Window
     {
+        HudViewModelBase viewModel = new HudViewModelBase();
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = viewModel;
+            viewModel.AddItems();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            viewModel.AddItems();
         }
     }
 }
