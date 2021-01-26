@@ -3,5 +3,6 @@
                     xmlns:local="clr-namespace:HudUI_WPF_Test.Themes">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="ListviewThemes.xaml"/>
+        <ResourceDictionary Source="ScannerThemes.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

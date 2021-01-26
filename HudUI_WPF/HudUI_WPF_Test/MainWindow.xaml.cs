@@ -27,7 +27,7 @@ namespace HudUI_WPF_Test
         {
             InitializeComponent();
             this.DataContext = viewModel;
-            viewModel.AddItems();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

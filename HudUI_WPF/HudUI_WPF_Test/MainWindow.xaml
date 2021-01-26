@@ -4,21 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HudUI_WPF_Test"
+        xmlns:control="clr-namespace:HudUI_WPF_Test.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid Background="#111111">
-            <ListView ItemsSource="{Binding ItemsSource}" Background="Transparent"/>
-        </Grid>
-        <Grid Grid.Column="1">
-            <Button HorizontalAlignment="Center" VerticalAlignment="Center"
-                    Width="100" Height="30"
-                    Content="애니메이션 시작"
-                    Click="Button_Click"/>
-        </Grid>
+        <control:HudScannerControl/>
     </Grid>
 </Window>
