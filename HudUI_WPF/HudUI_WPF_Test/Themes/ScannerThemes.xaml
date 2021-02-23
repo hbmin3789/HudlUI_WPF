@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HudUI_WPF_Test.Themes"
+                    xmlns:control="clr-namespace:HudUI_WPF_Test.Controls">
+    <VisualBrush x:Key="ScannerBackgroundGridBrush" 
+                 TileMode="Tile"
+                 Viewport="0 0 50 50"
+                 Viewbox="0 0 50 50"
+                 ViewportUnits="Absolute"
+                 ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Rectangle Width="50" Height="50"
+                       Stroke="#555555"
+                       StrokeThickness="1"/>
+        </VisualBrush.Visual>
+    </VisualBrush>
+    <Style TargetType="{x:Type control:HudScannerControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type control:HudScannerControl}">
+                    <Grid Background="#111111">
+                        <Grid.Resources>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Width" Value="300"/>
+                                <Setter Property="Height" Value="300"/>
+                                <Setter Property="Fill" Value="#4190c4"/>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <BlurEffect Radius="70"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Opacity" Value="0.2"/>
+                            </Style>
+                        </Grid.Resources>
+                        <Grid Background="{StaticResource ScannerBackgroundGridBrush}">
+                            <Ellipse HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-170,-170,0,0"/>
+                            <Ellipse HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-170,-170,0"/>
+                            <Ellipse HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-170,0,0,-170"/>
+                            <Ellipse HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,-170,-170"/>
+                        </Grid>
+                        <Rectangle x:Name="rtScanBar" Fill="#4190c4" Height="30">
+                            <Rectangle.Effect>
+                                <BlurEffect Radius="30"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
